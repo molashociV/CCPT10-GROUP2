@@ -113,7 +113,7 @@
     .header p,
     header p,
     p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         color: var(--muted);
     }
 
@@ -155,17 +155,18 @@
     }
 
     h2 {
-        font-size: clamp(1.5rem, 2vw, 2.2rem);
+        font-size: clamp(1.6rem, 2vw, 2.4rem);
     }
 
     h3 {
-        font-size: 1.22rem;
+        font-size: 1.4rem;
     }
 
     p,
     li {
         color: var(--text);
         text-align: left;
+        font-size: 1.2rem;
     }
 
     .card p,
@@ -288,31 +289,31 @@
         }
 
         h1 {
-            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            font-size: clamp(2rem, 7vw, 3rem);
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
 
         h3 {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
         }
 
         p,
         div p,
-        div {
-            font-size: 1.1rem;
+        li {
+            font-size: 1.25rem;
         }
 
         div h1,
         div h2,
         div h3,
         div li {
-            font-size: 1.1rem;
+            font-size: 2rem;
         }
 
         .hero-tag {
-            font-size: 0.75rem;
+            font-size: 1;
         }
     }
