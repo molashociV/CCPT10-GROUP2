@@ -34,6 +34,10 @@
         max-width: 100%;
         display: block;
         height: auto;
+        border: 3px solid var(--primary);
+        border-radius: 8px;
+        padding: 8px;
+        background: var(--panel-alt);
     }
 
     .navbar{
@@ -120,7 +124,7 @@
     .container > div {
         background: var(--panel);
         border: 1px solid var(--line);
-        border-radius: 20px;
+        border-radius: 0;
         box-shadow: var(--shadow);
         padding: 28px 24px;
         margin: 22px auto;
@@ -187,14 +191,14 @@
         max-width: 800px;
         margin: 24px auto;
         overflow: hidden;
-        border-radius: 20px;
+        border-radius: 0;
         border: 1px solid var(--line);
         box-shadow: var(--shadow);
     }
 
     .picture-box img {
         width: 100%;
-        border-radius: 20px;
+        border-radius: 0;
     }
 
     footer {
