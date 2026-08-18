@@ -303,14 +303,14 @@
         p,
         div p,
         li {
-            font-size: 1.25rem;
+            font-size: 1.6rem;
         }
 
         div h1,
         div h2,
         div h3,
         div li {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         .hero-tag {
