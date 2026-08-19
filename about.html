@@ -5,46 +5,122 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About us</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            main {
+                text-align: center;
+            }
+            section h1, section h3, section p {
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar">
+            
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="science.html">Science</a></li>
                 <li><a href="AP.html">AP</a></li>
                 <li><a href="values.html">Values</a></li>
+                <li><a href="english.html">English</a></li>
             </ul>
         </nav>
 
         <main>
             <section class="hero">
                 <div class="hero-tag">About us</div>
-                <h1>We are building a better future together</h1>
-                <p>Our group believes in responsibility, teamwork, and thoughtful action. We work to make informed decisions that help our school community and the wider world.</p>
+                <h1>Group Two's Website</h1>
             </section>
 
             <section>
-                <h2>Our mission</h2>
-                <p>We aim to create meaningful projects that raise awareness, encourage positive action, and help people understand important issues with clarity and purpose.</p>
+                <h1>Group leader</h1>
+                <p>Althea Chiyawan</p>
+                <img src="Althea.jpg" alt="Althea Chiyawan" style="display: block; margin: 0 auto; width: 200px; height: auto;">
             </section>
 
             <section>
-                <div class="cards">
-                    <div class="card">
-                        <h3>Teamwork</h3>
-                        <p>We support one another and learn by collaborating with respect and openness.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Responsibility</h3>
-                        <p>We value making choices that reflect integrity and care for others.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Purpose</h3>
-                        <p>We focus on creating work that is useful, honest, and relevant to real community needs.</p>
-                    </div>
-                </div>
+                <h1>Group members</h1>
+                <h3>(BOYS)</h3>
+                <p>Crystobal</p>
+                <img src="Crystobal.jpg" alt="Crystobal" style="display: block; margin: 0 auto; width: 200px; height: auto;">
+                
+                <p>Khian</p>
+                <img src="Khian.jpg" alt="khian" style="display: block; margin: 0 auto; width: 200px; height: auto;">
+
+                <p>Vico</p>
+                <img src="Vico.jpg" alt="Vico" style="display: block; margin: 0 auto; width: 200px; height: auto;">
+                <p>Hello my name is Vicoshalom F. Opungu and i made the main website for this group.</p>
+
+                <h3>(GIRLS)</h3>
+                <p>Princes</p>
+                <img src="Princes.jpg" alt="Princes" style="display: block; margin: 0 auto; width: 200px; height: auto;">   
+            
+                <p>Cyrhen</p>
+                <img src="Cyrhen.jpg" alt="Cyrhen" style="display: block; margin: 0 auto; width: 200px; height: auto;">   
+            
+                <p>Nica</p>
+                <img src="Nica.jpg" alt="Nica" style="display: block; margin: 0 auto; width: 200px; height: auto;">
+            
+                <p>Yrha</p>
+                <img src="yrah.jpg" alt="Yrha" style="display: block; margin: 0 auto; width: 200px; height: auto;">
             </section>
+            
+            <div class="music-box" id="musicBox">
+    <button id="musicClose" class="music-close" type="button" aria-label="Close music box">×</button>
+
+    <span>Background Music</span>
+
+    <button id="musicToggle" type="button">▶ Play</button>
+
+    <label for="musicVolume">Volume</label>
+    <input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.5">
+</div>
+
+<button id="musicOpen" class="music-open" type="button">🎵 Open Music</button>
+
+<audio id="bgMusic" loop>
+    <source src="Chopin.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const musicBox = document.getElementById("musicBox");
+    const musicOpen = document.getElementById("musicOpen");
+    const musicClose = document.getElementById("musicClose");
+    const toggleButton = document.getElementById("musicToggle");
+    const volumeControl = document.getElementById("musicVolume");
+
+    music.volume = 0.5;
+
+    toggleButton.addEventListener("click", () => {
+        if (music.paused) {
+            music.play().then(() => {
+                toggleButton.textContent = "❚❚ Pause";
+            });
+        } else {
+            music.pause();
+            toggleButton.textContent = "▶ Play";
+        }
+    });
+
+    volumeControl.addEventListener("input", () => {
+        music.volume = Number(volumeControl.value);
+    });
+
+    musicClose.addEventListener("click", () => {
+        musicBox.classList.add("hidden");
+        musicOpen.classList.add("visible");
+    });
+
+    musicOpen.addEventListener("click", () => {
+        musicBox.classList.remove("hidden");
+        musicOpen.classList.remove("visible");
+    });
+</script>
+          
+
         </main>
     </body>
 </html>

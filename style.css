@@ -1,4 +1,4 @@
-    *{
+*{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -84,6 +84,24 @@
         background-color: var(--primary-soft);
         color: var(--primary);
         transform: translateY(-1px);
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .navbar-logo {
+        height: 60px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
     }
 
     main,
@@ -456,5 +474,113 @@
         .pre{
             font-size: 0.85rem;
             line-height: 1.4;
+        }
+    }
+
+    .music-box {
+        position: fixed !important;
+        right: 12px;
+        bottom: 12px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: calc(100vw - 24px);
+        padding: 12px;
+    }
+
+    .music-box button {
+        padding: 6px 12px;
+        color: white;
+        background: #4f46e5;
+        border: 0;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .music-box button:hover {
+        background: #3730a3;
+    }
+
+    .music-box input {
+        width: 80px;
+    }
+
+    .music-progress {
+        width: 180px;
+        accent-color: #1683ff;
+        cursor: pointer;
+    }
+
+    .music-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .music-box label {
+        font-weight: bold;
+        color: white;
+    }
+
+    .music-box input[type="range"] {
+        cursor: pointer;
+        accent-color: #1683ff;
+    }
+
+    #musicVolume {
+        width: 90px;
+    }
+
+    .music-box.hidden {
+        display: none !important;
+    }
+
+    .music-close {
+        float: right;
+        margin-left: 10px;
+        border: 0;
+        background: transparent;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .music-open {
+        position: fixed !important;
+        right: 12px;
+        bottom: 12px;
+        z-index: 9999;
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 8px;
+        background: #1d3557;
+        color: white;
+        cursor: pointer;
+    }
+
+    .music-open.visible {
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        .music-box {
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .music-box span {
+            width: 100%;
+        }
+
+        #musicVolume {
+            width: 90px;
+        }
+
+        .music-open {
+            font-size: 14px;
+            padding: 10px 12px;
         }
     }

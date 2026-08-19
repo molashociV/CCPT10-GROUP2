@@ -19,6 +19,7 @@
             <li><a href="science.html">Science</a></li>
             <li><a href="AP.html">AP</a></li>
             <li><a href="values.html">Values</a></li>
+            <li><a href="english.html">English</a></li>
             </ul>
         </nav>
         <div class="container">
@@ -26,5 +27,38 @@
         <div class="box">
             <P>Fitness is important for maintaining a healthy lifestyle and preventing chronic diseases.</P>
         </div>
+        <audio id="bgMusic" loop>
+                <source src="Chopin.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+
+            <script>
+                const music = document.getElementById("bgMusic");
+                const toggleButton = document.getElementById("musicToggle");
+                const volumeControl = document.getElementById("musicVolume");
+                
+
+                music.volume = 0.5;
+
+                toggleButton.addEventListener("click", () => {
+                    if (music.paused) {
+                        music.play()
+                            .then(() => {
+                                toggleButton.textContent = "❚❚ Pause";
+                            })
+                            .catch(error => {
+                                console.error("Audio could not play:", error);
+                                alert("Check that audio/lizst.mp3 exists and is a valid MP3 file.");
+                            });
+                    } else {
+                        music.pause();
+                        toggleButton.textContent = "▶ Play";
+                    }
+                });
+
+                volumeControl.addEventListener("input", () => {
+                    music.volume = Number(volumeControl.value);
+                });
+            </script>
     </body>
   </html>
