@@ -142,7 +142,7 @@
     .container > div {
         background: var(--panel);
         border: 1px solid var(--line);
-        border-radius: 0;
+        border-radius: 18px;
         box-shadow: var(--shadow);
         padding: 28px 24px;
         margin: 22px auto;
@@ -490,7 +490,7 @@
         padding: 12px;
         color: white;
         background: #1d3557;
-        border-radius: 10px;
+        border-radius: 18px;
     }
 
     .music-box button:not(.music-close) {
@@ -557,4 +557,10 @@
             font-size: 14px;
             padding: 10px 12px;
         }
+    }
+
+    .container > div.music-box {
+        background: #1d3557;
+        color: white;
+        box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
     }

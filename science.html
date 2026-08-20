@@ -63,7 +63,6 @@
     <button id="musicClose" class="music-close" type="button" aria-label="Close music box">×</button>
 
     <span>Background Music</span>
-
     <button id="musicToggle" type="button">▶ Play</button>
 
     <label for="musicVolume">Volume</label>
@@ -72,9 +71,9 @@
 
 <button id="musicOpen" class="music-open" type="button">🎵 Open Music</button>
 
-<audio id="bgMusic" loop>
-    <source src="liszt.mp3" type="audio/mpeg">
-    Your browser does not support audio.
+<audio id="bgMusic" loop preload="auto">
+    <source src="on.mp3" type="audio/mpeg">
+    <source src="on.ogg" type="audio/ogg">
 </audio>
 
 <script>
@@ -87,14 +86,17 @@
 
     music.volume = 0.5;
 
-    toggleButton.addEventListener("click", () => {
-        if (music.paused) {
-            music.play().then(() => {
+    toggleButton.addEventListener("click", async () => {
+        try {
+            if (music.paused) {
+                await music.play();
                 toggleButton.textContent = "❚❚ Pause";
-            });
-        } else {
-            music.pause();
-            toggleButton.textContent = "▶ Play";
+            } else {
+                music.pause();
+                toggleButton.textContent = "▶ Play";
+            }
+        } catch (error) {
+            console.error("Audio playback failed:", error);
         }
     });
 
@@ -103,6 +105,8 @@
     });
 
     musicClose.addEventListener("click", () => {
+        music.pause();
+        toggleButton.textContent = "▶ Play";
         musicBox.classList.add("hidden");
         musicOpen.classList.add("visible");
     });
@@ -113,6 +117,8 @@
     });
 </script>
 
-        </body> 
-        </html>
+</div> <!-- closes .container -->
+
+</body>
+</html>
 

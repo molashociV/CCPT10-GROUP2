@@ -79,9 +79,9 @@
 
 <button id="musicOpen" class="music-open" type="button">🎵 Open Music</button>
 
-<audio id="bgMusic" loop>
-    <source src="Chopin.mp3" type="audio/mpeg">
-    Your browser does not support audio.
+<audio id="bgMusic" loop preload="auto">
+    <source src="toy.mp3" type="audio/mpeg">
+    <source src="toy.ogg" type="audio/ogg">
 </audio>
 
 <script>
@@ -94,14 +94,17 @@
 
     music.volume = 0.5;
 
-    toggleButton.addEventListener("click", () => {
-        if (music.paused) {
-            music.play().then(() => {
+    toggleButton.addEventListener("click", async () => {
+        try {
+            if (music.paused) {
+                await music.play();
                 toggleButton.textContent = "❚❚ Pause";
-            });
-        } else {
-            music.pause();
-            toggleButton.textContent = "▶ Play";
+            } else {
+                music.pause();
+                toggleButton.textContent = "▶ Play";
+            }
+        } catch (error) {
+            console.error("Audio playback failed:", error);
         }
     });
 
@@ -110,6 +113,8 @@
     });
 
     musicClose.addEventListener("click", () => {
+        music.pause();
+        toggleButton.textContent = "▶ Play";
         musicBox.classList.add("hidden");
         musicOpen.classList.add("visible");
     });
@@ -119,8 +124,6 @@
         musicOpen.classList.remove("visible");
     });
 </script>
-          
-
         </main>
     </body>
 </html>
