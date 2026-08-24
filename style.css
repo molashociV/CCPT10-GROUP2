@@ -197,8 +197,15 @@
     p,
     li {
         color: var(--text);
-        text-align: left;
         font-size: 1.2rem;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    li {
+        text-align: left;
     }
 
     .card p,
