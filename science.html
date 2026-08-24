@@ -65,6 +65,7 @@
     <button id="musicClose" class="music-close" type="button" aria-label="Close music box">×</button>
 
     <span>Background Music</span>
+
     <button id="musicToggle" type="button">▶ Play</button>
 
     <label for="musicVolume">Volume</label>
@@ -73,9 +74,10 @@
 
 <button id="musicOpen" class="music-open" type="button">🎵 Open Music</button>
 
-<audio id="bgMusic" loop preload="auto">
+<audio id="bgMusic" loop>
     <source src="on.mp3" type="audio/mpeg">
     <source src="on.ogg" type="audio/ogg">
+    Your browser does not support audio.
 </audio>
 
 <script>
@@ -99,6 +101,7 @@
             }
         } catch (error) {
             console.error("Audio playback failed:", error);
+            alert("Audio could not play. Check that audio/on.mp3 exists.");
         }
     });
 
@@ -118,8 +121,6 @@
         musicOpen.classList.remove("visible");
     });
 </script>
-
-</div> <!-- closes .container -->
 
 </body>
 </html>
