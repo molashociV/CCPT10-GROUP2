@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequences and Polynomials</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7f6;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 8px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .definition {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .definition h2 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .example {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .example h2 {
+            color: #1565c0;
+            border-bottom: 2px solid #1565c0;
+            padding-bottom: 8px;
+        }
+
+        .example h3 {
+            color: #2e7d32;
+        }
+
+        .formula {
+            background: #eef6ff;
+            padding: 15px;
+            border-left: 5px solid #1565c0;
+            margin: 15px 0;
+            font-family: "Courier New", monospace;
+            font-size: 17px;
+        }
+
+        .solution {
+            background: #f1f8e9;
+            padding: 15px;
+            border-left: 5px solid #43a047;
+            margin-top: 15px;
+        }
+
+        .answer {
+            font-weight: bold;
+            color: #1b5e20;
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background: #263238;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="science.html">Science</a></li>
+            <li><a href="AP.html">AP</a></li>
+            <li><a href="values.html">Values</a></li>
+            <li><a href="english.html">English</a></li>
+            <li><a href="documentary.html">Documentary</a></li>
+            <li><a href="math.html">Math</a></li>
+            </ul>
+        </nav>
+
+<header>
+    <h1>Sequences and Polynomials</h1>
+    <p>Understanding Mathematical Patterns Through Real-Life Examples</p>
+</header>
+
+<div class="container">
+
+    <!-- SEQUENCE DEFINITION -->
+    <section class="definition">
+        <h2>What is a SEQUENCE?</h2>
+
+        <p>
+            A sequence is an ordered list of numbers, objects, or other elements
+            that follow a particular pattern or rule. Unlike a set, the order of
+            elements in a sequence matters.
+        </p>
+    </section>
+
+    <!-- POLYNOMIAL DEFINITION -->
+    <section class="definition">
+        <h2>What is a POLYNOMIAL?</h2>
+
+        <p>
+            A polynomial is a mathematical expression made by adding and
+            subtracting terms, where each term is a constant or a constant
+            multiplied by a variable raised to a non-negative whole number
+            exponent.
+        </p>
+    </section>
+
+
+    <!-- EXAMPLE 1 -->
+    <section class="example">
+
+        <h2>Example 1: Sequence</h2>
+
+        <p>
+            A patient is advised to walk for 10 minutes on the first day as part
+            of a gradual recovery program. The walking time increases by 5 minutes
+            each day. How many minutes should the patient walk on the 7th day?
+        </p>
+
+        <h3>Solution</h3>
+
+        <p>
+            This is an <strong>arithmetic sequence</strong> because the walking
+            time increases by the same amount each day.
+        </p>
+
+        <h3>Given:</h3>
+
+        <ul>
+            <li>First term: <strong>a₁ = 10 minutes</strong></li>
+            <li>Common difference: <strong>d = 5 minutes</strong></li>
+            <li>Term needed: <strong>n = 7</strong></li>
+        </ul>
+
+        <h3>Formula:</h3>
+
+        <div class="formula">
+            aₙ = a₁ + (n − 1)d
+        </div>
+
+        <h3>Substitute:</h3>
+
+        <div class="solution">
+            a₇ = 10 + (7 − 1)(5)<br>
+            a₇ = 10 + 30<br>
+            a₇ = 40 minutes
+        </div>
+
+        <div class="answer">
+            Therefore, the patient would walk 40 minutes on the 7th day.
+        </div>
+
+    </section>
+
+
+    <!-- EXAMPLE 2 -->
+    <section class="example">
+
+        <h2>Example 2: Sequence</h2>
+
+        <p>
+            A small business sells 500 products in its first month. Because of a
+            steady increase in customers, the business expects to sell 50 more
+            products each month. How many products does the business expect to
+            sell in the 8th month?
+        </p>
+
+        <h3>Solution</h3>
+
+        <p>
+            This is an <strong>arithmetic sequence</strong> because the number of
+            products increases by the same amount each month.
+        </p>
+
+        <h3>Given:</h3>
+
+        <ul>
+            <li>First term: <strong>a₁ = 500</strong></li>
+            <li>Common difference: <strong>d = 50</strong></li>
+            <li>Number of terms: <strong>n = 8</strong></li>
+        </ul>
+
+        <h3>Formula:</h3>
+
+        <div class="formula">
+            aₙ = a₁ + (n − 1)d
+        </div>
+
+        <h3>Substitute:</h3>
+
+        <div class="solution">
+            a₈ = 500 + (8 − 1)(50)<br>
+            a₈ = 500 + 7(50)<br>
+            a₈ = 500 + 350<br>
+            a₈ = 850
+        </div>
+
+        <div class="answer">
+            Thus, the business expects to sell 850 products in the 8th month,
+            assuming the increase of 50 products per month continues.
+        </div>
+
+    </section>
+
+
+    <!-- EXAMPLE 3 -->
+    <section class="example">
+
+        <h2>Example 3: Sequence</h2>
+
+        <p>
+            A farmer harvests 200 kilograms of tomatoes from a field during the
+            first harvest. Because of improved crop growth and management, the
+            farmer expects the harvest to increase by 25 kilograms for each
+            succeeding harvest. How many kilograms are expected during the
+            6th harvest?
+        </p>
+
+        <h3>Solution</h3>
+
+        <p>
+            This is an <strong>arithmetic sequence</strong> because the harvest
+            increases by the same amount each time.
+        </p>
+
+        <h3>Given:</h3>
+
+        <ul>
+            <li>First term: <strong>a₁ = 200 kg</strong></li>
+            <li>Common difference: <strong>d = 25 kg</strong></li>
+            <li>Term needed: <strong>n = 6</strong></li>
+        </ul>
+
+        <h3>Formula:</h3>
+
+        <div class="formula">
+            aₙ = a₁ + (n − 1)d
+        </div>
+
+        <h3>Substitute:</h3>
+
+        <div class="solution">
+            a₆ = 200 + (6 − 1)(25)<br>
+            a₆ = 200 + 125<br>
+            a₆ = 325 kg
+        </div>
+
+        <div class="answer">
+            Thus, the farmer expects to harvest 325 kilograms of tomatoes during
+            the 6th harvest, assuming the increase remains constant.
+        </div>
+
+    </section>
+
+
+    <!-- EXAMPLE 4 -->
+    <section class="example">
+
+        <h2>Example 4: Sequence</h2>
+
+        <p>
+            An engineer is testing a simplified model of a structure where the
+            measured vibration amplitude decreases by 20% after each successive
+            test. If the amplitude during the first test is 50 mm, what is the
+            expected amplitude during the 5th test?
+        </p>
+
+        <h3>Solution</h3>
+
+        <p>
+            This is a <strong>geometric sequence</strong> because each term is
+            multiplied by the same ratio.
+        </p>
+
+        <h3>Given:</h3>
+
+        <ul>
+            <li>First term: <strong>a₁ = 50 mm</strong></li>
+            <li>Common ratio: <strong>r = 0.80</strong> because
+                100% − 20% = 80%</li>
+            <li>Number of terms: <strong>n = 5</strong></li>
+        </ul>
+
+        <h3>Formula:</h3>
+
+        <div class="formula">
+            aₙ = a₁r<sup>n−1</sup>
+        </div>
+
+        <h3>Substitute:</h3>
+
+        <div class="solution">
+            a₅ = 50(0.80)<sup>5−1</sup><br>
+            a₅ = 50(0.80)<sup>4</sup><br>
+            a₅ = 50(0.4096)<br>
+            a₅ = 20.48 mm
+        </div>
+
+        <div class="answer">
+            Therefore, the expected vibration amplitude during the 5th test is
+            20.48 mm, according to this simplified model.
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>Sequences and Polynomials | Mathematics in Real Life</p>
+</footer>
+
+</body>
+</html>
+Thu 1:43 PM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequences and Polynomials in Disaster Management</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7f9;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1f4e5f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .definition {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .definition h2 {
+            color: #1f4e5f;
+        }
+
+        .example {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .example h2 {
+            color: #c45a1c;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        .problem {
+            background: #eef6f8;
+            padding: 15px;
+            border-left: 5px solid #1f4e5f;
+            margin: 15px 0;
+        }
+
+        .solution {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .solution h3 {
+            color: #1f4e5f;
+        }
+
+        .formula {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .answer {
+            background: #e5f4e8;
+            padding: 15px;
+            border-left: 5px solid #3b7d4a;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background: #1f4e5f;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sequences and Polynomials</h1>
+    <p>Real-Life Applications in Disaster Management</p>
+</header>
+
+<div class="container">
+
+    <!-- DEFINITIONS -->
+    <section class="definition">
+        <h2>What is a SEQUENCE?</h2>
+        <p>
+            A sequence is an ordered list of numbers, objects, or other elements
+            that follow a particular pattern or rule. Unlike a set, the order of
+            elements in a sequence matters.
+        </p>
+    </section>
+
+    <section class="definition">
+        <h2>What is a POLYNOMIAL?</h2>
+        <p>
+            A polynomial is a mathematical expression made by adding and
+            subtracting terms, where each term is a constant or a constant
+            multiplied by a variable raised to a non-negative whole number exponent.
+        </p>
+    </section>
+
+
+    <!-- SEQUENCES -->
+    <section class="example">
+        <h2>EX. 1: SEQUENCE</h2>
+
+        <div class="problem">
+            <strong>Problem:</strong>
+            During a typhoon evacuation, a community center helps 50 people
+            in the first hour. Because more volunteers arrive, the number of
+            people assisted increases by 20 people every hour. How many people
+            will be assisted in the 5th hour?
+        </div>
+
+        <div class="solution">
+            <h3>SOLUTION:</h3>
+
+            <p><strong>GIVEN:</strong></p>
+            <p>a₁ = 50</p>
+            <p>d = 20</p>
+            <p>n = 5</p>
+
+            <p><strong>FORMULA:</strong></p>
+            <p class="formula">aₙ = a₁ + (n − 1)d</p>
+
+            <p><strong>SUBSTITUTE:</strong></p>
+            <p>a₅ = 50 + (5 − 1)(20)</p>
+            <p>a₅ = 50 + 80</p>
+            <p>a₅ = 130</p>
+
+            <div class="answer">
+                Therefore, the community center can assist 130 people during
+                the 5th hour.
+            </div>
+        </div>
+    </section>
+
+
+    <section class="example">
+        <h2>EX. 2: SEQUENCE</h2>
+
+        <div class="problem">
+            <strong>Problem:</strong>
+            A relief center distributes 100 food packs on the first day.
+            Because more families arrive, it distributes 25 additional packs
+            each day. How many food packs will be distributed on the 7th day?
+        </div>
+
+        <div class="solution">
+            <h3>SOLUTION:</h3>
+
+            <p><strong>FORMULA:</strong></p>
+            <p class="formula">aₙ = a₁ + (n − 1)d</p>
+
+            <p><strong>SUBSTITUTE:</strong></p>
+            <p>a₇ = 100 + (7 − 1)(25)</p>
+            <p>a₇ = 100 + 6(25)</p>
+            <p>a₇ = 100 + 150</p>
+            <p>a₇ = 250</p>
+
+            <div class="answer">
+                Thus, the relief center will distribute 250 food packs
+                on the 7th day.
+            </div>
+        </div>
+    </section>
+
+
+    <section class="example">
+        <h2>EX. 3: SEQUENCE</h2>
+
+        <div class="problem">
+            <strong>Problem:</strong>
+            After heavy rainfall, a monitoring station records the floodwater
+            level decreasing by 8 cm every hour. If the initial level is 80 cm,
+            what will the level be after 5 hours?
+        </div>
+
+        <div class="solution">
+            <h3>SOLUTION:</h3>
+
+            <p><strong>FORMULA:</strong></p>
+            <p class="formula">aₙ = a₁ + (n − 1)d</p>
+
+            <p><strong>SUBSTITUTE:</strong></p>
+            <p>a₆ = 80 + (6 − 1)(−8)</p>
+            <p>a₆ = 80 − 40</p>
+            <p>a₆ = 40 cm</p>
+
+            <div class="answer">
+                Thus, the water level will be 40 cm after 5 hours.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- POLYNOMIALS -->
+    <section class="example">
+        <h2>EX. 1: POLYNOMIAL</h2>
+
+        <div class="problem">
+            <strong>Problem:</strong>
+            A model estimates the area affected by a landslide as
+            P(x) = x² + 6x + 20; x = 4.
+        </div>
+
+        <div class="solution">
+            <h3>SOLUTION:</h3>
+
+            <p>P(x) = x² + 6x + 20</p>
+            <p>P(4) = (4)² + 6(4) + 20</p>
+            <p>P(4) = 16 + 24 + 20</p>
+            <p>P(4) = 60</p>
+
+            <div class="answer">
+                Thus, the affected area is 60 square units.
+            </div>
+        </div>
+    </section>
+
+
+    <section class="example">
+        <h2>EX. 2: POLYNOMIAL</h2>
+
+        <div class="problem">
+            <strong>Problem:</strong>
+            A disaster-preparedness activity estimates a damage index using
+            P(x) = x² − 10x + 40; x = 8.
+        </div>
+
+        <div class="solution">
+            <h3>SOLUTION:</h3>
+
+            <p>P(x) = x² − 10x + 40</p>
+            <p>P(😎 = (8)² − 10(😎 + 40</p>
+            <p>P(😎 = 64 − 80 + 40</p>
+            <p>P(😎 = 24</p>
+
+            <div class="answer">
+                Thus, the damage index is 24.
+            </div>
+        </div>
+    </section>
+
+
+    <section class="example">
+        <h2>EX. 3: POLYNOMIAL</h2>
+
+        <div class="problem">
+            <strong>Problem:</strong>
+            An area covered by volcanic ash was represented by
+            P(x) = 2x² + 5x + 10; x = 5.
+        </div>
+
+        <div class="solution">
+            <h3>SOLUTION:</h3>
+
+            <p>P(x) = 2x² + 5x + 10</p>
+            <p>P(5) = 2(5)² + 5(5) + 10</p>
+            <p>P(5) = 2(25) + 25 + 10</p>
+            <p>P(5) = 50 + 25 + 10</p>
+            <p>P(5) = 50 + 35</p>
+            <p>P(5) = 85</p>
+
+            <div class="answer">
+                Therefore, the ash coverage is 85 square units.
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Sequences and Polynomials | Disaster Management Applications</p>
+</footer>
+
+</body>
+</html>
